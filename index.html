@@ -44,6 +44,64 @@
       </div>
     </header>
 
+    <!-- Zone de recherche et filtres -->
+    <!--Titre et sous-titre de la zone de recherche -->
+    <section class="research-filters-section">
+      <div class="research-title">
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
+      </div>
+
+      <!-- formulaire de recherche et icone de localisation -->
+      <form action="submit" method="get" class="research-form">
+        <div class="icon-map-container">
+          <i class="fa-solid fa-location-dot" id="icone-maps"></i>
+        </div>
+        <input id="user-input" name="city" type="text" placeholder="Marseille, France">
+        <button class="btn-research" type="submit" aria-label="Rechercher une ville">
+          <span id="research">Rechercher</span>
+          <span id="glass"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </button>
+      </form>
+
+      <!-- Zone de filtres -->
+      <div class="filter-section">
+        <h3>Filtres</h3>
+        <ul class="filter-list">
+          <li>
+            <button class="filter-button" aria-label="Filtrer par hébergements économiques">
+              <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+              <span>Économique</span>
+            </button>
+          </li>
+          <li>
+            <button class="filter-button filter-family" aria-label="Filtrer par hébergements familial">
+              <i class="fa-solid fa-person" aria-hidden="true" id="family-icon"></i>
+              <span>Familial</span>
+            </button>
+          </li>
+          <li>
+            <button class="filter-button" aria-label="Filtrer par hébergements romantiques">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i>
+              <span>Romantique</span>
+            </button>
+          </li>
+          <li>
+            <button class="filter-button" aria-label="Filtrer par hébergements avec nos pépites" id="fire-button">
+              <i class="fa-solid fa-fire" aria-hidden="true"></i>
+              <span>Nos pépites</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- petite zone point informations logements -->
+      <div class="info-message">
+        <span id="info-icon"><i class="fa-solid fa-info" aria-hidden="true"></i></span>
+        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+      </div>
+    </section>
+
     <main>
       <div class="hebergements-and-populaires">
         <section class="hebergements">

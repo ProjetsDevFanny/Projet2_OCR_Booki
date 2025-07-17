@@ -1,5 +1,12 @@
-.research-title h1 {
-  padding: 10px 0;
+.research-title {
+  h1 {
+    padding: 10px 0;
+    font-size: var(--font-size-title-section);
+  }
+
+  p {
+    font-weight: 400;
+  }
 }
 
 /* formulaire de recherche */
@@ -8,62 +15,64 @@
   display: flex;
   align-items: center;
   margin: 30px 0;
+
+  .icon-map-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 49px;
+    border-radius: 15px 0 0 15px;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-bg-color);
+
+    #icone-maps {
+      font-size: 20px;
+      color: var(--black);
+    }
+  }
+
+  #user-input {
+    width: 220px;
+    padding-left: 20px;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
+    border-left: none;
+    border-right: none;
+    height: 49px;
+    color: var(--black);
+
+    &::placeholder {
+      color: var(--black);
+    }
+  }
+
+  .btn-research {
+    width: 132px;
+    height: 49px;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: var(--dark-blue);
+      border: 1px solid var(--dark-blue);
+    }
+  }
+
+  #research {
+    display: inline;
+    transition: all 0.3s ease;
+  }
+
+  #glass {
+    display: none;
+  }
 }
 
-.icon-map-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 49px;
-  border-radius: 15px 0 0 15px;
-  background-color: var(--light-grey);
-  border: 1px solid var(--light-grey);
-}
-
-#icone-maps {
-  font-size: 17.6px;
-}
-
-#user-input {
-  width: 236px;
-  padding-left: 20px;
-  border-top: 1px solid var(--light-grey);
-  border-bottom: 1px solid var(--light-grey);
-  border-left: none;
-  border-right: none;
-  height: 49px;
-  color: var(--black);
-}
-
-#user-input::placeholder {
-  color: var(--black);
-}
-
-.btn-research {
-  width: 132px;
-  height: 49px;
-  border-radius: 0 15px 15px 0;
-  border: 1px solid var(--blue);
-  background-color: var(--blue);
-  color: var(--white);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.btn-research:hover {
-  background-color: var(--dark-blue);
-  border: 1px solid var(--dark-blue);
-}
-
-#research {
-  display: inline;
-  transition: all 0.3s ease;
-}
-
-#glass {
-  display: none;
-}
 
 /* Section des filtres */
 
@@ -71,7 +80,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: clamp(10px, 2vw, 40px); /* gap entre 10px et 40px: qui s'adapte à la taille de l'écran */
+  gap: clamp(10px, 2vw, 40px);
+  /* gap entre 10px et 40px: qui s'adapte à la taille de l'écran */
   margin-bottom: 30px;
 }
 
@@ -79,7 +89,7 @@
   display: flex;
   gap: clamp(10px, 2vw, 60px);
   margin: 0;
- }
+}
 
 .filter-button {
   display: flex;
@@ -97,11 +107,11 @@
 
 .filter-button i {
   font-size: 20px;
-  color: var(--blue);
+  color: var(--main-color);
 }
 
 .filter-button:hover {
-  background-color: var(--light-blue);
+  background-color: var(--filter-bg-color);
 }
 
 .filter-button:active {
@@ -120,26 +130,31 @@
 .info-message {
   display: flex;
   gap: 10px;
-  margin: 40px 0 30px 0;
+  margin: 30px 0;
   align-items: center;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #info-icon {
+    font-size: 15px;
+    color: var(--main-color);
+    background-color: var(--white);
+    border: 2px solid var(--dark-grey);
+    border-radius: 50%;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+  }
+
+  p {
+    font-weight: 400;
+  }
 }
 
-.info-message span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-#info-icon {
-  font-size: 12px;
-  color: var(--blue);
-  background-color: var(--white);
-  border: 2px solid var(--dark-grey);
-  border-radius: 50%;
-  padding: 10px;
-  width: 20px;
-  height: 20px;
-  /* transform: translateY(-5px); */
-}
 
 /* > font-weight ne marche pas sur l'icone "fa-solid fa-info", peut-être utilser l'icone .svg de font-awesome pour modifier l'épaisseur de l'icone ?*/
