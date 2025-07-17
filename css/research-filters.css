@@ -1,0 +1,145 @@
+.research-title h1 {
+  padding: 10px 0;
+}
+
+/* formulaire de recherche */
+
+.research-form {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.icon-map-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 49px;
+  border-radius: 15px 0 0 15px;
+  background-color: var(--light-grey);
+  border: 1px solid var(--light-grey);
+}
+
+#icone-maps {
+  font-size: 17.6px;
+}
+
+#user-input {
+  width: 236px;
+  padding-left: 20px;
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+  border-left: none;
+  border-right: none;
+  height: 49px;
+  color: var(--black);
+}
+
+#user-input::placeholder {
+  color: var(--black);
+}
+
+.btn-research {
+  width: 132px;
+  height: 49px;
+  border-radius: 0 15px 15px 0;
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-research:hover {
+  background-color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+}
+
+#research {
+  display: inline;
+  transition: all 0.3s ease;
+}
+
+#glass {
+  display: none;
+}
+
+/* Section des filtres */
+
+.filter-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(10px, 2vw, 40px); /* gap entre 10px et 40px: qui s'adapte à la taille de l'écran */
+  margin-bottom: 30px;
+}
+
+.filter-list {
+  display: flex;
+  gap: clamp(10px, 2vw, 60px);
+  margin: 0;
+ }
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  padding: 0em 1.3em;
+  gap: 10px;
+  width: auto;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--white);
+  border: 2px solid var(--dark-grey);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-button i {
+  font-size: 20px;
+  color: var(--blue);
+}
+
+.filter-button:hover {
+  background-color: var(--light-blue);
+}
+
+.filter-button:active {
+  transform: scale(0.95);
+}
+
+/* Ecartmement particulier pour l'icone "fa-solid fa-family"...à voir si on garde */
+/* 
+#family-icon {
+  margin: 0 3px;
+  font-size: 20.8px;
+} */
+
+/* petite zone point informations logements */
+
+.info-message {
+  display: flex;
+  gap: 10px;
+  margin: 40px 0 30px 0;
+  align-items: center;
+}
+
+.info-message span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#info-icon {
+  font-size: 12px;
+  color: var(--blue);
+  background-color: var(--white);
+  border: 2px solid var(--dark-grey);
+  border-radius: 50%;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  /* transform: translateY(-5px); */
+}
+
+/* > font-weight ne marche pas sur l'icone "fa-solid fa-info", peut-être utilser l'icone .svg de font-awesome pour modifier l'épaisseur de l'icone ?*/

@@ -1,0 +1,61 @@
+/*  desktop first = max-width: 1400px*/
+
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo */
+#logo-booki {
+  width: 61px;
+}
+
+/* navigation */
+
+nav {
+  display: flex;
+  padding: 0;
+}
+
+.navbar-link {
+  display: flex;
+  flex: 1;
+  /* 1; pour que chaque lien prenne une part égale de l'espace disponible */
+}
+
+nav a {
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 30px 30px;
+  display: block;
+  /* pour que l'élément a prenne toute la largeur (disponible) de son parent */
+  width: 100%;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--main-color);
+  font-weight: 450;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  /* pour que l'élément ::before soit sur toute la largeur du lien */
+  height: 3px;
+  background: var(--white);
+  top: 0;
+  left: 0;
+  transition: background 0.3s ease;
+}
+
+nav a:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: var(--main-color);
+  left: 0;
+}
