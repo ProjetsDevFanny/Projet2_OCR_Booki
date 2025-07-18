@@ -31,9 +31,10 @@
  }
 
  .hebergements-cards img {
-  height: 130px;
-  width: 100%; 
-  border-radius: 13px 13px 0px 0px;
+    height: 130px;
+    width: 100%; 
+    border-radius: 13px 13px 0px 0px;
+    object-fit: cover;
 }
 
 .hebergements-cards .card-content {

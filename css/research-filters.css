@@ -102,7 +102,7 @@
   background-color: var(--white);
   border: 2px solid var(--dark-grey);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
 }
 
 .filter-button i {

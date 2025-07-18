@@ -1,0 +1,42 @@
+.activities {
+  margin: 70px 30px;
+}
+
+.activities-cards {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(10px, 2vw, 40px);
+  padding-top: 33px;
+}
+
+.activities-cards a {
+  flex: 1;
+  display: flex; /* pour que l’article à l’intérieur s'étire */
+}
+
+.activities-cards .card {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* pour que .card remplisse toute la hauteur disponible dans son parent <a> */
+  flex-direction: column;
+  padding: 0;
+}
+
+.activities-cards .card img {
+  height: 380px;
+  width: 100%;
+  border-radius: 13px 13px 0px 0px;
+  object-fit: cover;
+}
+
+.activities-cards .card-content {
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1; /* Permet au contenu de la carte de prendre tout l'espace disponible restant après l'image */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
