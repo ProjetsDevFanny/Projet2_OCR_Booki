@@ -81,13 +81,13 @@
   flex-direction: row;
   align-items: center;
   gap: clamp(10px, 2vw, 40px);
-  /* gap entre 10px et 40px: qui s'adapte à la taille de l'écran */
+  /* gap entre 10px et 40px et, 2vw = 2% de la largeur de l'écran */
   margin-bottom: 30px;
 }
 
 .filter-list {
   display: flex;
-  gap: clamp(10px, 2vw, 60px);
+  gap: clamp(10px, 1vw, 60px);
   margin: 0;
 }
 

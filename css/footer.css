@@ -1,0 +1,41 @@
+footer {
+  background-color: var(--main-bg-color);
+}
+
+.footer-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-between; 
+}
+
+.footer-container article {
+ flex: 1;
+}
+
+.footer-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.footer-container ul li {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer-container ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-container h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+
+
