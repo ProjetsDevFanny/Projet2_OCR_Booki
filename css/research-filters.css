@@ -15,12 +15,12 @@
   display: flex;
   align-items: center;
   margin: 30px 0;
-
+  
   .icon-map-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
+    min-width: 48px;
     height: 49px;
     border-radius: 15px 0 0 15px;
     background-color: var(--main-bg-color);
@@ -33,7 +33,7 @@
   }
 
   #user-input {
-    width: 220px;
+    width: 150px;
     padding-left: 20px;
     border-top: 1px solid var(--main-bg-color);
     border-bottom: 1px solid var(--main-bg-color);

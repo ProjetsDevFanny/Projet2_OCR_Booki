@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.logo-container a {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
 /* logo */
 #logo-booki {
   width: 61px;
@@ -11,15 +17,14 @@
 
 /* navigation */
 
-nav {
+.navbar {
   display: flex;
-  padding: 0;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 40px;
 
   .navbar-link {
     display: flex;
-    flex: 1;
-    gap: 20px;
-    /* 1; pour que chaque lien prenne une part égale de l'espace disponible */
 
     a {
       position: relative;
@@ -30,21 +35,22 @@ nav {
       width: 100%;
       font-weight: 500;
 
-      &:hover {
-        color: var(--main-color);
-        font-weight: 450;
-      }
-
       &::before {
         content: "";
         position: absolute;
         width: 100%;
         /* pour que l'élément ::before soit sur toute la largeur du lien */
         height: 3px;
-        background: var(--white);
+        background: transparent;
         top: 0;
         left: 0;
         transition: background 0.3s ease;
+        pointer-events: none; /* pour que l'élément ::before ne soit pas interactif */
+      }
+
+      &:hover {
+        color: var(--main-color);
+        font-weight: 450;
       }
 
       &:hover::before {
