@@ -10,8 +10,8 @@
 }
 
 .activities-cards a {
-  flex: 1;
-  display: flex; /* pour que l’article à l’intérieur s'étire */
+  flex: 1; 
+  display: flex; 
 }
 
 .activities-cards .card {

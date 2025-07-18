@@ -83,6 +83,7 @@
 
 .populaires-cards img {
   width: 33%;
+  min-width: 60px;  /* Pour ne pas que l'image ne s'écrase trop sur la gauche en responsive tablette */
   height: 136px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;

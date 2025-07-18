@@ -18,12 +18,13 @@ nav {
   .navbar-link {
     display: flex;
     flex: 1;
+    gap: 20px;
     /* 1; pour que chaque lien prenne une part égale de l'espace disponible */
 
     a {
       position: relative;
       transition: color 0.3s ease;
-      padding: 30px 30px;
+      padding: 30px 0px;
       display: block;
       /* pour que l'élément a prenne toute la largeur (disponible) de son parent */
       width: 100%;
