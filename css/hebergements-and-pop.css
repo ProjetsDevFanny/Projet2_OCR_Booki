@@ -1,4 +1,202 @@
-/****** Hebergements And Populaires ***********/
+/* === Hebergements And Populaires === */
+
+.hebergements-and-populaires {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 767.98px) {
+    flex-direction: column-reverse;
+  }
+
+  section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+
+    @media (max-width: 767.98px) {
+      border-radius: 0px;
+      padding: 30px 20px;
+    }
+  }
+
+  /* === Hebergements === */
+  .hebergements {
+    width: 65%;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+
+    @media (max-width: 767.98px) {
+      background-color: var(--white);
+      margin-top: 10px;
+    }
+
+    .hebergements-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(10px, 2vw, 33px);
+      margin-top: 33px;
+
+      @media (max-width: 767.98px) {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+        gap: 20px;
+      }
+
+      .card {
+        height: 207px;
+        /* Pour que leur taille ne s'agrandisse pas en responsive */
+        display: flex;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          border-radius: 15px 15px 0px 0px;
+          object-fit: cover;
+          /* ==== Pour anticiper le responsive ==== */
+          flex: 1;
+          min-height: 0;
+          /* pour permettre à l'image de se rétrécir quand on diminue la taille d'écran */
+          max-height: calc(100% - 70px);
+          /* pour limiter la hauteur de l'image et laisser exactement 70px pour .card-content (= que .card-content ne soit pas écrasé par l'image) */
+        }
+
+        .card-content {
+          height: 70px;
+          padding-top: 5px;
+          padding-left: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          .card-title {
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+
+    /* === Afficher plus === */
+    .hebergements-display-more {
+      margin-top: 33px;
+      transition: all 0.1s ease-in-out;
+
+      @media (max-width: 767.98px) {
+        margin-top: 20px;
+      }
+
+      &:hover {
+        color: var(--main-color);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+/* === Populaires === */
+.populaires {
+  width: 32%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 767.98px) {
+    margin-top: 0px;
+  }
+
+  .populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .populaires-cards {
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+    }
+
+    a {
+      @media (max-width: 1024px) {
+        width: 30%;
+      }
+
+      @media (max-width: 767.98px) {
+        width: 100%;
+      }
+
+      .card {
+        display: flex;
+        margin-top: 33px;
+
+        @media (max-width: 767.98px) {
+          margin-top: 20px;
+        }
+
+        img {
+          width: 33%;
+          min-width: 60px;
+          /* Pour ne pas que l'image ne s'écrase trop sur la gauche en responsive tablette */
+          height: 136px;
+          /* J'ai mis border-radius à 15px pour que l'image suive mieux les bords (avant 20px) */
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+
+          @media (max-width: 1024px) {
+            width: 50%;
+          }
+        }
+
+        .card-content {
+          width: 67%;
+          padding-left: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          box-sizing: border-box;
+
+          .card-title {
+            margin-top: 10px;
+            margin-bottom: 4px;
+
+            @media (max-width: 1024px) {
+              font-size: 14px;
+            }
+          }
+
+          .card-subtitle {
+            margin: 0;
+
+            @media (max-width: 1024px) {
+              font-size: 13px;
+            }
+          }
+
+          .card-rating {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* CSS classique, pour le validator W3, car il ne comprends pas le nesting */
+/* 
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
@@ -11,38 +209,34 @@
   box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
-.hebergements {
+.hebergements-and-populaires .hebergements {
   width: 65%;
 }
 
-.hebergements-cards {
+.hebergements-and-populaires .hebergements .hebergements-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 33px;
   margin-top: 33px;
 }
 
-.hebergements-cards .card {
+.hebergements-and-populaires .hebergements .hebergements-cards .card {
   height: 207px;
-  /* Pour que leur taille ne s'agrandisse pas en responsive */
   display: flex;
   flex-direction: column;
-  /* margin-top: 33px; */
 }
 
-.hebergements-cards img {
-  /* ==== Pour anticiper le responsive ==== */
-  flex: 1;
-  min-height: 0; /* pour permettre à l'image de se rétrécir quand on diminue la taille d'écran */
-  max-height: calc(100% - 70px);   /* pour limiter la hauteur de l'image et laisser exactement 30px pour .card-content (que .card-content ne soit pas écrasé par l'image) */
-  /* ========================================= */
+.hebergements-and-populaires .hebergements .hebergements-cards .card img {
   width: 100%;
-  border-radius: 13px 13px 0px 0px;
+  border-radius: 15px 15px 0 0;
   object-fit: cover;
+  flex: 1;
+  min-height: 0;
+  max-height: calc(100% - 70px);
+
 }
 
-.hebergements-cards .card-content {
+.hebergements-and-populaires .hebergements .hebergements-cards .card .card-content {
   height: 70px;
   padding-top: 5px;
   padding-left: 10px;
@@ -51,45 +245,44 @@
   justify-content: space-around;
 }
 
-.hebergements-cards .card-title {
-  margin-bottom: 6px;
+.hebergements-and-populaires .hebergements .hebergements-cards .card .card-content .card-title {
+  margin-bottom: 8px;
 }
 
-.display-more {
-  transition: all 0.2s ease-in-out;
+.hebergements-and-populaires .hebergements .hebergements-display-more {
   margin-top: 33px;
+  transition: all 0.1s ease-in-out;
 }
 
-.display-more:hover {
-  color: var(--blue);
+.hebergements-and-populaires .hebergements .hebergements-display-more:hover {
+  color: var(--main-color);
   cursor: pointer;
 }
 
-/****** Populaires ***********/
 .populaires {
   width: 32%;
 }
 
-.populaires-title {
+.populaires .populaires-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.populaires-cards .card {
+.populaires .populaires-cards .card {
   display: flex;
   margin-top: 33px;
 }
 
-.populaires-cards img {
+.populaires .populaires-cards .card img {
   width: 33%;
-  min-width: 60px;  /* Pour ne pas que l'image ne s'écrase trop sur la gauche en responsive tablette */
+  min-width: 60px;
   height: 136px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
-.populaires-cards .card-content {
+.populaires .populaires-cards .card .card-content {
   width: 67%;
   padding-left: 15px;
   display: flex;
@@ -98,15 +291,15 @@
   box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
+.populaires .populaires-cards .card .card-content .card-title {
   margin-top: 10px;
   margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
+.populaires .populaires-cards .card .card-content .card-subtitle {
   margin: 0;
 }
 
-.populaires-cards .card-rating {
+.populaires .populaires-cards .card .card-content .card-rating {
   margin-bottom: 5px;
-}
+} */

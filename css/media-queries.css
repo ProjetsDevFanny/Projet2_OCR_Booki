@@ -62,6 +62,7 @@
   }
 }
 
+
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   .main-container {
@@ -75,12 +76,13 @@
     flex-direction: column;
   }
 
+
   #logo-booki {
-   width: 100px;
+    width: 100px;
   }
 
   .navbar {
-   gap: 0;
+    gap: 0;
   }
 
   .navbar-link {
@@ -110,17 +112,10 @@
     background-color: var(--main-color);
   }
 
-/* formulaire de recherche = ecran mobile */
+  /* formulaire de recherche = ecran mobile */
 
   .research-filters-section {
     padding: 0 20px;
-  }
-
-  .research-form {
-    #user-input {
-        width: 255px;
-        min-width: 160px;
-    }
   }
 
   .research-form .btn-research {
@@ -128,7 +123,7 @@
     width: 48px;
     font-size: 16px;
     border-radius: 15px;
-    box-shadow:  0px 4px 2px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);
   }
 
   .research-form .btn-research span {
@@ -141,26 +136,26 @@
 
   .research-form .btn-research #glass {
     display: inline;
-      }
+  }
 
   .research-form .btn-research i {
     color: var(--white);
   }
 
   /* filtres = ecran mobile */
-
+  
   .filter-section {
     flex-direction: column;
     align-items: flex-start;
     font-size: 16px;
     gap: 20px;
   }
-
+  
   .filter-list {
     flex-wrap: wrap;
     gap: 20px;
   }
-
+  
   .filter-button {
     width: 160px;
   }
@@ -168,11 +163,11 @@
   .filter-button span {
     font-size: 14px;
   }
-
-   .info-message {
+  
+  .info-message {
     margin-top: 30px;
   }
-
+  
   /* section hébergement et les plus populaires = ecran mobile */
 
   .hebergements-and-populaires {
@@ -183,58 +178,56 @@
     border-radius: 0px;
     padding: 30px 20px;
   }
-  
+
   .populaires {
     margin-top: 0px;
   }
 
   .populaires-cards {
-    flex-direction: column;    
+    flex-direction: column;
   }
-
+  
   .populaires-cards a {
     width: 100%;
   }
-
+  
   .populaires-cards .card {
     margin-top: 20px;
   }
-
+  
   /* Partie hébergements = ecran mobile */
-
+  
   #hebergements {
     background-color: var(--white);
     margin-top: 10px;
-    }
-
+  }
+  
   .hebergements-cards {
     grid-template-columns: 1fr;
-    margin-top: 20px;    
+    margin-top: 20px;
     gap: 20px;
   }
 
-  .display-more {
+  .hebergements-display-more {
     margin-top: 20px;
   }
-
+  
   /* Partie Activités = ecran mobile */
-
+  
   .activities {
     padding: 0 20px;
     margin: 20px 0px 60px 0px;
   }
-
+  
   .activities-cards {
     flex-direction: column;
     gap: 30px;
   }
+    /* ==== */
 
- 
   /* footer = ecran mobile */
 
   .footer-container {
-    padding-left: 20px;
-    padding-right: 20px;
     flex-direction: column;
     gap: 50px;
   }

@@ -1,5 +1,63 @@
 .activities {
   margin: 70px 30px;
+
+  @media (max-width: 767.98px) {
+    padding: 0 20px;
+    margin: 20px 0px 60px 0px;
+  }
+
+  .activities-cards {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(10px, 2vw, 40px);
+    padding-top: 33px;
+
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    a {
+      flex: 1;
+      display: flex;
+
+      .card {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        /* pour que .card remplisse toute la hauteur disponible dans son parent <a> */
+        flex-direction: column;
+        padding: 0;
+
+        img {
+          height: 380px;
+          width: 100%;
+          border-radius: 13px 13px 0px 0px;
+          object-fit: cover;
+
+          @media (max-width: 1024px) {
+            height: 230px !important;
+          }
+        }
+
+        .card-content {
+          padding: 20px;
+          box-sizing: border-box;
+          flex: 1;
+          /* Permet au contenu de la carte de prendre tout l'espace disponible restant après l'image */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+/* CSS classique, pour le validator W3, car il ne comprends pas le nesting */
+
+/* .activities {
+  margin: 70px 30px;
 }
 
 .activities-cards {
@@ -10,33 +68,32 @@
 }
 
 .activities-cards a {
-  flex: 1; 
-  display: flex; 
+  flex: 1;
+  display: flex;
 }
 
-.activities-cards .card {
+.activities-cards a .card {
   display: flex;
   height: 100%;
   width: 100%;
-  /* pour que .card remplisse toute la hauteur disponible dans son parent <a> */
   flex-direction: column;
   padding: 0;
 }
 
-.activities-cards .card img {
+.activities-cards a .card img {
   height: 380px;
   width: 100%;
-  border-radius: 13px 13px 0px 0px;
+  border-radius: 13px 13px 0 0;
   object-fit: cover;
 }
 
-.activities-cards .card-content {
+.activities-cards a .card .card-content {
   padding: 20px;
   box-sizing: border-box;
-  flex: 1; /* Permet au contenu de la carte de prendre tout l'espace disponible restant après l'image */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
 

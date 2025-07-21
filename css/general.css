@@ -9,10 +9,29 @@
 
 html {
   scroll-behavior: smooth; /*Effet scroll doux*/
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-container {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 320px;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+    @media (max-width: 767.98px) {
+      margin: 20px 0 0 0;
+      padding: 0;
+    }
+  }
 }
 
+/* === Variables === */
 
-/* Couleurs principales */
+/* === Couleurs principales === */
 :root {
   --main-color: #0065FC; 
   /* --blue: #0065FC; */
@@ -27,7 +46,7 @@ html {
   --black: #000000;
 }
 
-/* Taille des polices de caractères */
+/* === Taille des polices de caractères === */
 :root {
   --font-size-general: 16px;     
   --font-size-title-section: 22px;    
@@ -41,28 +60,18 @@ body, button, input {
   font-style: normal;
 }
 
+/* === Icones === */
 .fa-solid {
   color: var(--main-color);
  }
 
-body {
-  display: flex;
-  justify-content: center;
-}
-
-.main-container {
-  width: 100%;
-  max-width: 1440px;
-  min-width: 320px;
-  padding: 0 50px;
-  box-sizing: border-box;
-}
-
+/* === Liens === */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* === Titres des sections === */
 .section-title {
   margin: 0;
   font-size: var(--font-size-title-section);
