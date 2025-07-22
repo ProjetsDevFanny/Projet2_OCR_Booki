@@ -43,65 +43,65 @@
       </div>
     </header>
 
-    <!-- Zone de recherche et filtres -->
-    <!--Titre et sous-titre de la zone de recherche -->
-    <section class="research-filters-section">
-      <div class="research-title">
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p>En plein centre ville ou en pleine nature</p>
-      </div>
-
-      <!-- formulaire de recherche et icone de localisation -->
-      <form action="submit" method="get" class="research-form">
-        <div class="icon-map-container">
-          <i class="fa-solid fa-location-dot" id="icone-maps"></i>
-        </div>
-        <input id="user-input" name="city" type="text" placeholder="Marseille, France">
-        <button class="btn-research" type="submit" aria-label="Rechercher une ville">
-          <span id="research">Rechercher</span>
-          <span id="glass"><i class="fa-solid fa-magnifying-glass"></i></span>
-        </button>
-      </form>
-
-      <!-- Zone de filtres -->
-      <div class="filter-section">
-        <h2>Filtres</h2>
-        <ul class="filter-list">
-          <li>
-            <button class="filter-button" aria-label="Filtrer par hébergements économiques">
-              <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
-              <span>Économique</span>
-            </button>
-          </li>
-          <li>
-            <button class="filter-button filter-family" aria-label="Filtrer par hébergements familial">
-              <i class="fa-solid fa-person" aria-hidden="true" id="family-icon"></i>
-              <span>Familial</span>
-            </button>
-          </li>
-          <li>
-            <button class="filter-button" aria-label="Filtrer par hébergements romantiques">
-              <i class="fa-solid fa-heart" aria-hidden="true"></i>
-              <span>Romantique</span>
-            </button>
-          </li>
-          <li>
-            <button class="filter-button" aria-label="Filtrer par hébergements avec nos pépites" id="fire-button">
-              <i class="fa-solid fa-fire" aria-hidden="true"></i>
-              <span>Nos pépites</span>
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <!-- petite zone point informations logements -->
-      <div class="info-message">
-        <span id="info-icon"><i class="fa-solid fa-info" aria-hidden="true"></i></span>
-        <p>Plus de 500 logements sont disponibles dans cette ville</p>
-      </div>
-    </section>
-
     <main>
+      <!-- Zone de recherche et filtres -->
+      <!--Titre et sous-titre de la zone de recherche -->
+      <section class="research-filters-section">
+        <div class="research-title">
+          <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+          <p>En plein centre ville ou en pleine nature</p>
+        </div>
+
+        <!-- formulaire de recherche et icone de localisation -->
+        <form action="submit" method="get" class="research-form">
+          <div class="icon-map-container">
+            <i class="fa-solid fa-location-dot" id="icone-maps"></i>
+          </div>
+          <input id="user-input" name="city" type="text" placeholder="Marseille, France">
+          <button class="btn-research" type="submit" aria-label="Rechercher une ville">
+            <span id="research">Rechercher</span>
+            <span id="glass"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </button>
+        </form>
+
+        <!-- Zone de filtres -->
+        <div class="filter-section">
+          <h2>Filtres</h2>
+          <ul class="filter-list">
+            <li>
+              <button class="filter-button" aria-label="Filtrer par hébergements économiques">
+                <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                <span>Économique</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-button filter-family" aria-label="Filtrer par hébergements familial">
+                <i class="fa-solid fa-person" aria-hidden="true" id="family-icon"></i>
+                <span>Familial</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-button" aria-label="Filtrer par hébergements romantiques">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <span>Romantique</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-button" aria-label="Filtrer par hébergements avec nos pépites" id="fire-button">
+                <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                <span>Nos pépites</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- petite zone point informations logements -->
+        <div class="info-message">
+          <span id="info-icon"><i class="fa-solid fa-info" aria-hidden="true"></i></span>
+          <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
+      </section>
+
       <div class="hebergements-and-populaires">
         <!-- Section hébergements trouvés -->
         <section class="hebergements" id="hebergements">
@@ -111,11 +111,10 @@
             <!-- Première image des hébergements = Hotel du port -->
             <a href="#">
               <article class="card">
-                <img src="images/hebergements-webp/fred-kleber.webp" alt="Hotel du port" loading="lazy">
-                <!-- <picture>
-                  <source srcset="images/hebergements-webp/fred-kleber.webp" type="image/webp">
-                  <img src="images/hebergements/fred-kleber.jpg" alt="Hotel du port" loading="lazy">
-                </picture> -->
+                <figure>
+                  <img src="images/hebergements-webp/fred-kleber.webp" alt="Hotel du port" loading="lazy">
+                  <figcaption class="sr-only">Photo de l'hôtel du port</figcaption>
+                </figure>
                 <div class="card-content">
                   <div class="card-txt">
                     <h3 class="card-title">Hôtel du port</h3>
@@ -135,9 +134,10 @@
             <!-- Deuxième image des hébergements = Hotel chez Amina -->
             <a href="#">
               <article class="card">
-
-                <img src="images/hebergements-webp/febrian-zakaria.webp" alt="Hotel chez Amina" loading="lazy">
-
+                <figure>
+                  <img src="images/hebergements-webp/febrian-zakaria.webp" alt="Hotel chez Amina" loading="lazy">
+                  <figcaption class="sr-only">Photo de l'hôtel chez Amina</figcaption>
+                </figure>
                 <div class="card-content">
                   <div class="card-txt">
                     <h3 class="card-title">Hôtel chez Amina</h3>
@@ -157,7 +157,10 @@
             <!-- Troisième image des hébergements = Hotel Les mouettes -->
             <a href="#">
               <article class="card">
-                <img src="images/hebergements-webp/reisetopia.webp" alt="Hotel Les mouettes" loading="lazy">
+                <figure>
+                  <img src="images/hebergements-webp/reisetopia.webp" alt="Hotel Les mouettes" loading="lazy">
+                  <figcaption class="sr-only">Photo de l'hôtel Les mouettes</figcaption>
+                </figure>
                 <div class="card-content">
                   <div class="card-txt">
                     <h3 class="card-title">Hôtel Les mouettes</h3>
@@ -177,7 +180,10 @@
             <!-- Quatrième image des hébergements = Hotel de la mer -->
             <a href="#">
               <article class="card">
-                <img src="images/hebergements-webp/annie-spratt.webp" alt="Hotel de la mer" loading="lazy">
+                <figure>
+                  <img src="images/hebergements-webp/annie-spratt.webp" alt="Hotel de la mer" loading="lazy">
+                  <figcaption class="sr-only">Photo de l'hôtel de la mer</figcaption>
+                </figure>
                 <div class="card-content">
                   <div class="card-txt">
                     <h3 class="card-title">Hôtel de la mer</h3>
@@ -197,7 +203,10 @@
             <!-- Cinquième image des hébergements = Auberge La Cannebière -->
             <a href="#">
               <article class="hebergement-card card">
-                <img src="images/hebergements-webp/marcus-loke.webp" alt="Auberge La Cannebière" loading="lazy">
+                <figure>
+                  <img src="images/hebergements-webp/marcus-loke.webp" alt="Auberge La Cannebière" loading="lazy">
+                  <figcaption class="sr-only">Photo de l'auberge La Cannebière</figcaption>
+                </figure>
                 <div class="card-content hebergement-card-content">
                   <div class="card-txt hebergement-card-txt">
                     <h3 class="card-title">Auberge La Cannebière</h3>
@@ -217,7 +226,10 @@
             <!-- Sixième image des hébergements = Auberge Le Panier -->
             <a href="#">
               <article class="card">
-                <img src="images/hebergements-webp/nicate-lee.webp" alt="Auberge Le Panier" loading="lazy">
+                <figure>
+                  <img src="images/hebergements-webp/nicate-lee.webp" alt="Auberge Le Panier" loading="lazy">
+                  <figcaption class="sr-only">Photo de l'auberge Le Panier</figcaption>
+                </figure>
                 <div class="card-content">
                   <div class="card-txt">
                     <h3 class="card-title">Auberge Le Panier</h3>
@@ -246,8 +258,11 @@
           <div class="populaires-cards">
             <a href="#">
               <article class="card">
-                <img src="./images/hebergements-webp/emile-guillemot.webp"
-                  alt="Image de la chambre d'hôtel montrant un lit">
+                <figure>
+                  <img src="./images/hebergements-webp/emile-guillemot.webp"
+                    alt="Image de la chambre d'hôtel montrant un lit">
+                  <figcaption class="sr-only">Photo de la chambre d'hôtel Le soleil du matin</figcaption>
+                </figure>
                 <div class="card-content">
                   <div class="card-txt">
                     <h3 class="card-title">Hôtel Le soleil du matin</h3>
@@ -266,8 +281,11 @@
             </a>
             <a href="#">
               <article class="card">
-                <img src="./images/hebergements-webp/aw-creative.webp"
-                  alt="Image de la chambre d'hôtel montrant un lit">
+                <figure>
+                  <img src="./images/hebergements-webp/aw-creative.webp"
+                    alt="Image de la chambre d'hôtel montrant un lit">
+                  <figcaption class="sr-only">Photo de la chambre d'hôtel Au cœur de l'eau</figcaption>
+                </figure>
                 <div class="card-content">
                   <div class="card-txt">
                     <h3 class="card-title">Chambres d’hôtes Au cœur de l’eau</h3>
@@ -286,8 +304,11 @@
             </a>
             <a href="#">
               <article class="card">
-                <img src="./images/hebergements-webp/febrian-zakaria2.webp"
-                  alt="Image de la chambre d'hôtel montrant un lit">
+                <figure>
+                  <img src="./images/hebergements-webp/febrian-zakaria2.webp"
+                    alt="Image de la chambre d'hôtel montrant un lit">
+                  <figcaption class="sr-only">Photo de la chambre d'hôtel Bleu et Blanc</figcaption>
+                </figure>
                 <div class="card-content">
                   <div class="card-txt">
                     <h3 class="card-title">Hôtel Bleu et Blanc</h3>
@@ -316,7 +337,10 @@
           <!-- Première image des activités = Vieux port -->
           <a href="#">
             <article class="card">
-              <img src="images/activites-webp/reno-laithienne.webp" alt="Vieux port" loading="lazy">
+              <figure>
+                <img src="images/activites-webp/reno-laithienne.webp" alt="Vieux port" loading="lazy">
+                <figcaption class="sr-only">Photo de l'activité Vieux port</figcaption>
+              </figure>
               <div class="card-content">
                 <h3 class="card-title">Vieux port</h3>
               </div>
@@ -326,7 +350,10 @@
           <!-- Deuxième image des activités = Port de Pomègues -->
           <a href="#">
             <article class="card">
-              <img src="images/activites-webp/paul-hermann.webp" alt="Fort de Pomègues" loading="lazy">
+              <figure>
+                <img src="images/activites-webp/paul-hermann.webp" alt="Fort de Pomègues" loading="lazy">
+                <figcaption class="sr-only">Photo de l'activité Port de Pomègues</figcaption>
+              </figure>
               <div class="card-content">
                 <h3 class="card-title">Port de Pomègues</h3>
               </div>
@@ -336,7 +363,10 @@
           <!-- Troisième image des activités = Parc National des Calanques -->
           <a href="#">
             <article class="card">
-              <img src="images/activites-webp/kilyan-sockalingum.webp" alt="Parc National des Calanques" loading="lazy">
+              <figure>
+                <img src="images/activites-webp/kilyan-sockalingum.webp" alt="Parc National des Calanques" loading="lazy">
+                <figcaption class="sr-only">Photo de l'activité Parc National des Calanques</figcaption>
+              </figure>
               <div class="card-content">
                 <h3 class="card-title">Parc National des Calanques</h3>
               </div>
@@ -345,7 +375,10 @@
           <!-- Quatrième image des activités = Notre-Dame-de-la-Garde -->
           <a href="#">
             <article class="card">
-              <img src="images/activites-webp/florian-wehde.webp" alt="Notre-Dame-de-la-Garde" loading="lazy">
+              <figure>
+                <img src="images/activites-webp/florian-wehde.webp" alt="Notre-Dame-de-la-Garde" loading="lazy">
+                <figcaption class="sr-only">Photo de l'activité Notre-Dame-de-la-Garde</figcaption>
+              </figure>
               <div class="card-content">
                 <h3 class="card-title">Notre-Dame-de-la-Garde</h3>
               </div>

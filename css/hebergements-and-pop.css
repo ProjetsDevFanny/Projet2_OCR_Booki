@@ -50,21 +50,28 @@
       }
 
       .card {
-        height: 207px;
+        height: 190px;
         /* Pour que leur taille ne s'agrandisse pas en responsive */
         display: flex;
         flex-direction: column;
 
-        img {
-          width: 100%;
-          border-radius: 15px 15px 0px 0px;
-          object-fit: cover;
-          /* ==== Pour anticiper le responsive ==== */
+        figure {
+          margin: 0;
+          /* figure a des marges par défaut, je les supprime */
+          max-height: calc(100% - 70px);
+          /* pour limiter la hauteur de l'image et laisser exactement 70px pour .card-content (= que .card-content ne soit pas écrasé par l'image) */
+          display: flex;
+          /* pour que l'image s'étire sur toute la hauteur de la .card */
+
+          /* ==== Pour anticiper le responsive (pour ne pas que la figure s'écrase) ==== */
           flex: 1;
           min-height: 0;
           /* pour permettre à l'image de se rétrécir quand on diminue la taille d'écran */
-          max-height: calc(100% - 70px);
-          /* pour limiter la hauteur de l'image et laisser exactement 70px pour .card-content (= que .card-content ne soit pas écrasé par l'image) */
+          
+          img {
+            width: 100%;
+            border-radius: 15px 15px 0px 0px;
+          }
         }
 
         .card-content {
@@ -99,7 +106,6 @@
   }
 }
 
-
 /* === Populaires === */
 .populaires {
   width: 32%;
@@ -132,7 +138,7 @@
 
     a {
       @media (max-width: 1024px) {
-        width: 30%;
+        width: 32%;
       }
 
       @media (max-width: 767.98px) {
@@ -142,58 +148,73 @@
       .card {
         display: flex;
         margin-top: 33px;
+        height: 136px;
 
         @media (max-width: 767.98px) {
           margin-top: 20px;
         }
 
-        img {
-          width: 33%;
-          min-width: 60px;
-          /* Pour ne pas que l'image ne s'écrase trop sur la gauche en responsive tablette */
-          height: 136px;
-          /* J'ai mis border-radius à 15px pour que l'image suive mieux les bords (avant 20px) */
-          border-top-left-radius: 15px;
-          border-bottom-left-radius: 15px;
 
+        figure {
+          margin: 0;
+          display: flex;
+          width: 40%;
+          /* min-width: 80px; */
+          /* Pour ne pas que l'image ne s'écrase trop sur la gauche en responsive tablette */
+         
+          
           @media (max-width: 1024px) {
-            width: 50%;
+            width: 70%;
+          }
+          
+          img {
+            width: 100%;
+            /* J'ai mis border-radius à 15px pour que l'image suive mieux les bords (avant 20px) */
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+
           }
         }
 
-        .card-content {
-          width: 67%;
-          padding-left: 15px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          box-sizing: border-box;
 
-          .card-title {
-            margin-top: 10px;
-            margin-bottom: 4px;
 
-            @media (max-width: 1024px) {
-              font-size: 14px;
-            }
+      
+         
+        }
+      }
+
+      .card-content {
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        .card-title {
+          margin-top: 10px;
+          margin-bottom: 4px;
+
+          @media (max-width: 1024px) {
+            font-size: 14px;
           }
+        }
 
-          .card-subtitle {
-            margin: 0;
+        .card-subtitle {
+          margin: 0;
 
-            @media (max-width: 1024px) {
-              font-size: 13px;
-            }
+          @media (max-width: 1024px) {
+            font-size: 13px;
           }
+        }
 
-          .card-rating {
-            margin-bottom: 5px;
-          }
+        .card-rating {
+          margin-bottom: 5px;
         }
       }
     }
   }
 }
+
 
 /* CSS classique, pour le validator W3, car il ne comprends pas le nesting */
 /* 

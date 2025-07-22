@@ -18,8 +18,13 @@ a {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 
-    img {
-      object-fit: cover;
+    figure {
+      margin: 0; /* figure a des marges par défaut, je les supprime */
+      display: flex; /* pour que l'image s'étire sur toute la hauteur de la .card */
+
+      img {
+        object-fit: cover;
+      }
     }
 
     .card-content {
