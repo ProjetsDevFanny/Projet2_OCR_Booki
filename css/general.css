@@ -52,6 +52,12 @@ html {
   --font-size-title-section: 22px;    
 }
 
+/* Essayer de faire des variables pour les breakpoints : ne fonctionne
+:root {
+  --breakpoint-desktop: 1024px;
+  --breakpoint-tablet-and-mobile: 767.98px;
+} */
+
 /* On applique la police de caractère à tous les éléments */
 body, button, input {
   font-size: var(--font-size-general);

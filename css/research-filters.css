@@ -41,7 +41,7 @@
   }
 
   #user-input {
-    min-width: 160px;
+    width: 150px;
     padding-left: 20px;
     border-top: 1px solid var(--main-bg-color);
     border-bottom: 1px solid var(--main-bg-color);
@@ -49,11 +49,15 @@
     border-right: none;
     height: 49px;
     color: var(--black);
+
+    @media (max-width: 767.98px) {
+      width: 220px;
+      min-width: 100px;
+    }
     
     &::placeholder {
       color: var(--black);
     }
-
   }
 
   .btn-research {
