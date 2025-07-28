@@ -78,7 +78,7 @@
           justify-content: space-around;
 
           .card-title {
-            margin-bottom: 8px;
+            margin-bottom: 7px;
           }
         }
       }
@@ -133,7 +133,7 @@
 
     a {
       @media (max-width: 1024px) {
-        width: 31%;
+        width: 32%;
       }
 
       @media (max-width: 767.98px) {
@@ -174,18 +174,19 @@
 
     .card-content {
       flex: 1; /* pour occuper tout l'espace restant */
-      padding-left: 15px;
+      padding-left: 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       box-sizing: border-box;
-
+     
       .card-title {
         margin-top: 10px;
         margin-bottom: 4px;
-
+       
         @media (max-width: 1024px) {
           font-size: 14px;
+          line-height: 1.2;
         }
       }
 
@@ -199,6 +200,7 @@
 
       .card-rating {
         margin-bottom: 5px;
+        white-space: nowrap;
       }
     }
   }

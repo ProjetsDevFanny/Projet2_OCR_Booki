@@ -41,7 +41,7 @@
         }
 
         .card-content {
-          padding: 20px;
+          padding: 15px;
           box-sizing: border-box;
           flex: 1;
           /* Permet au contenu de la carte de prendre tout l'espace disponible restant après l'image */
