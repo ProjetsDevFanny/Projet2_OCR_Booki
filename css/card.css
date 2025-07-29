@@ -29,7 +29,6 @@ a {
       }
 
       figcaption {
-        font-size: 16px;
         line-height: 0.9;
         /* Pour que le titre ne soit pas trop haut en responsive quand il passe à la ligne*/
         padding-left: 10px;
