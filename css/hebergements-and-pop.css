@@ -52,34 +52,31 @@
       .card {
         height: 190px;
         /* Pour que leur taille ne s'agrandisse pas en responsive */
-        display: flex;
         flex-direction: column;
+        justify-content: space-between;
+
 
         figure {
-          margin: 0; /* figure a des marges par défaut, je les supprime */
+          margin: 0;
+          /* figure a des marges par défaut, je les supprime */
           /* ==== Pour une hauteur uniforme pour toutes les hebergements-cards et en responsive ==== */
-          max-height: calc(100% - 70px);  /* Hauteur limitée pour réserver 70px au card-content */
-          flex: 1; /* Occupe tout l'espace disponible */
-          min-height: 0; /* Permet le rétrécissement en responsive */
+          max-height: calc(100% - 70px);
+          /* Hauteur limitée pour réserver 70px au card-content */
+          min-height: 0;
+          /* Permet le rétrécissement en responsive */
+
 
           img {
             width: 100%;
             height: 100%;
             border-radius: 15px 15px 0px 0px;
+            margin-bottom: 5px;
           }
         }
 
         .card-content {
-          height: 70px;
-          padding-top: 5px;
-          padding-left: 10px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-
-          .card-title {
-            margin-bottom: 7px;
-          }
+          height: 40px;
+          padding: 5px 0px 0px 10px;
         }
       }
     }
@@ -154,7 +151,8 @@
           min-width: 120px;
           /* Largeur uniforme pour toutes les populaires-cards et toutes les tailles d'écran : */
           width: 33%;
-          flex-shrink: 0; /* pour ne pas que la figure rétrécisse en responsive, même si le contenu est plus petit */
+          flex-shrink: 0;
+          /* pour ne pas que la figure rétrécisse en responsive, même si le contenu est plus petit */
 
           @media (max-width: 1024px) {
             width: 33%;
@@ -169,42 +167,45 @@
             border-bottom-left-radius: 15px;
           }
         }
-      }
-    }
 
-    .card-content {
-      flex: 1; /* pour occuper tout l'espace restant */
-      padding-left: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-sizing: border-box;
-     
-      .card-title {
-        margin-top: 10px;
-        margin-bottom: 4px;
-       
-        @media (max-width: 1024px) {
-          font-size: 14px;
-          line-height: 1.2;
+        .card-content {
+          flex: 1;
+          /* pour occuper tout l'espace restant */
+          padding-left: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          box-sizing: border-box;
+
+          .card-title {
+            margin-top: 10px;
+            margin-bottom: 4px;
+
+            @media (max-width: 1024px) {
+              font-size: 14px;
+              line-height: 1.2;
+            }
+          }
+
+          .card-subtitle {
+            margin: 0;
+
+            @media (max-width: 1024px) {
+              font-size: 13px;
+            }
+          }
+
+          .card-rating {
+            margin-bottom: 5px;
+            white-space: nowrap;
+          }
         }
-      }
-
-      .card-subtitle {
-        margin: 0;
-
-        @media (max-width: 1024px) {
-          font-size: 13px;
-        }
-      }
-
-      .card-rating {
-        margin-bottom: 5px;
-        white-space: nowrap;
       }
     }
   }
+
 }
+
 
 
 /* CSS classique, pour le validator W3, car il ne comprends pas le nesting */

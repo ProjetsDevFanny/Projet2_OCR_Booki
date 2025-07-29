@@ -22,32 +22,38 @@
       display: flex;
 
       .card {
-        display: flex;
         height: 100%;
         width: 100%;
         /* pour que .card remplisse toute la hauteur disponible dans son parent <a> */
-        flex-direction: column;
         padding: 0;
+        flex-direction: column;
 
-        img {
-          height: 380px;
-          width: 100%;
-          border-radius: 13px 13px 0px 0px;
-          object-fit: cover;
-
-          @media (max-width: 1024px) {
-            height: 230px !important;
-          }
-        }
-
-        .card-content {
-          padding: 15px;
-          box-sizing: border-box;
+        figure {
           flex: 1;
-          /* Permet au contenu de la carte de prendre tout l'espace disponible restant après l'image */
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          margin: 0;
+
+          img {
+            height: 380px;
+            width: 100%;
+            border-radius: 13px 13px 0px 0px;
+                      
+            @media (max-width: 1024px) {
+              height: 230px !important;
+            }
+          }
+
+          figcaption {
+            padding: 20px;
+            background-color: white;
+            border-radius: 0px 0px 13px 13px;
+            line-height: 1.2;
+            flex-grow: 1; /*Grandis et prends une part égale de l’espace restant*/
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+          }
         }
       }
     }
@@ -80,20 +86,31 @@
   padding: 0;
 }
 
-.activities-cards a .card img {
+.activities-cards a .card figure {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.activities-cards a .card figure img {
   height: 380px;
   width: 100%;
   border-radius: 13px 13px 0 0;
   object-fit: cover;
 }
 
-.activities-cards a .card .card-content {
+.activities-cards a .card figure figcaption {
   padding: 20px;
-  box-sizing: border-box;
-  flex: 1;
+  background-color: white;
+  border-radius: 0px 0px 13px 13px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 } */
 
 

@@ -52,7 +52,7 @@ html {
   --font-size-title-section: 22px;    
 }
 
-/* Essayer de faire des variables pour les breakpoints : ne fonctionne
+/* Essayer de faire des variables pour les breakpoints : ne fonctionne pas
 :root {
   --breakpoint-desktop: 1024px;
   --breakpoint-tablet-and-mobile: 767.98px;
