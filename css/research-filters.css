@@ -1,7 +1,7 @@
 /* === Titre de la section recherche === */
 
-@media (max-width: 767.98px) {
-  .research-filters-section {
+.research-filters-section {
+  @media (max-width: 767.98px) {
     padding: 0 20px;
   }
 }
@@ -54,7 +54,7 @@
       width: 220px;
       min-width: 100px;
     }
-    
+
     &::placeholder {
       color: var(--black);
     }
@@ -75,7 +75,7 @@
       width: 48px;
       font-size: 16px;
       border-radius: 15px;
-      box-shadow:  0px 4px 2px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);
     }
 
     &:hover {
@@ -88,7 +88,7 @@
         font-size: 16px;
       }
     }
-    
+
     #research {
       display: inline;
       transition: all 0.3s ease;
@@ -97,7 +97,7 @@
         display: none;
       }
     }
-    
+
     #glass {
       display: none;
 
@@ -128,7 +128,7 @@
     align-items: flex-start;
   }
 
-  @media (max-width: 767.98px) {  
+  @media (max-width: 767.98px) {
     gap: 20px;
     font-size: 16px;
   }
@@ -144,7 +144,7 @@
 
     @media (max-width: 767.98px) {
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
     }
 
     .filter-button {
@@ -224,8 +224,14 @@
 }
 
 
-/* CSS classique, pour le validator W3, car il ne comprends pas le nesting */
+/* CSS classique, pour le validator W3, car il ne comprends pas le nesting === checked */
 /* 
+@media (max-width: 767.98px) {
+  .research-filters-section {
+    padding: 0 20px;
+  }
+}
+
 .research-title h1 {
   padding: 10px 0;
   font-size: var(--font-size-title-section);
@@ -241,7 +247,7 @@
   margin: 30px 0;
 }
 
-.icon-map-container {
+.research-form .icon-map-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,12 +258,12 @@
   border: 1px solid var(--main-bg-color);
 }
 
-#icone-maps {
+.research-form .icon-map-container #icone-maps {
   font-size: 20px;
   color: var(--black);
 }
 
-#user-input {
+.research-form #user-input {
   width: 150px;
   padding-left: 20px;
   border-top: 1px solid var(--main-bg-color);
@@ -268,11 +274,18 @@
   color: var(--black);
 }
 
-#user-input::placeholder {
+@media (max-width: 767.98px) {
+  .research-form #user-input {
+    width: 220px;
+    min-width: 100px;
+  }
+}
+
+.research-form #user-input::placeholder {
   color: var(--black);
 }
 
-.btn-research {
+.research-form .btn-research {
   width: 132px;
   height: 49px;
   border-radius: 0 15px 15px 0;
@@ -283,18 +296,50 @@
   transition: all 0.2s ease;
 }
 
-.btn-research:hover {
+@media (max-width: 767.98px) {
+  .research-form .btn-research {
+    min-width: 48px;
+    width: 48px;
+    font-size: 16px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.research-form .btn-research:hover {
   background-color: var(--dark-blue);
   border: 1px solid var(--dark-blue);
 }
 
-#research {
+@media (max-width: 767.98px) {
+  .research-form .btn-research span {
+    font-size: 16px;
+  }
+}
+
+.research-form .btn-research #research {
   display: inline;
   transition: all 0.3s ease;
 }
 
-#glass {
+@media (max-width: 767.98px) {
+  .research-form .btn-research #research {
+    display: none;
+  }
+}
+
+.research-form .btn-research #glass {
   display: none;
+}
+
+@media (max-width: 767.98px) {
+  .research-form .btn-research #glass {
+    display: inline;
+  }
+
+  .research-form .btn-research #glass i {
+    color: var(--white);
+  }
 }
 
 .filter-section {
@@ -305,17 +350,38 @@
   margin-bottom: 30px;
 }
 
+@media (max-width: 1024px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .filter-section {
+    gap: 20px;
+    font-size: 16px;
+  }
+}
+
 .filter-section h2 {
   font-size: var(--font-size-title-section);
 }
 
-.filter-list {
+.filter-section .filter-list {
   display: flex;
   gap: clamp(10px, 1.4vw, 60px);
   margin: 0;
 }
 
-.filter-button {
+@media (max-width: 767.98px) {
+  .filter-section .filter-list {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+.filter-section .filter-list .filter-button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -330,25 +396,48 @@
   transition: all 0.4s ease;
 }
 
-.filter-button:hover {
+@media (max-width: 1024px) {
+  .filter-section .filter-list .filter-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .filter-section .filter-list .filter-button {
+    width: 160px;
+  }
+}
+
+.filter-section .filter-list .filter-button:hover {
   background-color: var(--filter-bg-color);
 }
 
-.filter-button:active {
+.filter-section .filter-list .filter-button:active {
   transform: scale(0.95);
 }
 
-.filter-button i {
+.filter-section .filter-list .filter-button i {
   font-size: 20px;
   color: var(--main-color);
 }
 
+@media (max-width: 767.98px) {
+  .filter-section .filter-list .filter-button span {
+    font-size: 14px;
+  }
+}
 
 .info-message {
   display: flex;
   gap: 10px;
   margin: 30px 0;
   align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .info-message {
+    margin-top: 30px;
+  }
 }
 
 .info-message span {
@@ -368,5 +457,4 @@
 .info-message p {
   font-weight: 400;
   margin: 0;
-}
-   */
+} */

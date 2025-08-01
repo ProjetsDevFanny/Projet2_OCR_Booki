@@ -7,23 +7,24 @@
     flex-direction: column;
   }
 
+  /* Zone logo Booki */
+
   .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    #logo-booki {
+      width: 61px;
+
+      @media (max-width: 767.98px) {
+        width: 100px;
+      }
+    }
   }
 }
 
-/* logo */
-#logo-booki {
-  width: 61px;
-
-  @media (max-width: 767.98px) {
-    width: 100px;
-  }
-}
-
-/* navigation */
+/* Zone navigation */
 
 .navbar {
   display: flex;
@@ -103,15 +104,21 @@
 }
 
 
-/* === CSS classique, pour le validator W3, car il ne comprends pas le nesting === */
-/*
-.logo-nav-container {
+/* === CSS classique, pour le validator W3, car il ne comprends pas le nesting === checked */
+
+/* .logo-nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo-nav-container .logo-container a {
+@media (max-width: 767.98px) {
+  .logo-nav-container {
+    flex-direction: column;
+  }
+}
+
+.logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,6 +128,12 @@
   width: 61px;
 }
 
+@media (max-width: 767.98px) {
+  #logo-booki {
+    width: 100px;
+  }
+}
+
 .navbar {
   display: flex;
   width: 100%;
@@ -128,11 +141,24 @@
   gap: 40px;
 }
 
-.navbar .navbar-link {
+@media (max-width: 767.98px) {
+  .navbar {
+    gap: 0;
+  }
+}
+
+.navbar-link {
   display: flex;
 }
 
-.navbar .navbar-link a {
+@media (max-width: 767.98px) {
+  .navbar-link {
+    text-align: center;
+    flex: 1;
+  }
+}
+
+.navbar-link a {
   position: relative;
   transition: color 0.3s ease;
   padding: 30px 0px;
@@ -141,7 +167,7 @@
   font-weight: 500;
 }
 
-.navbar .navbar-link a::before {
+.navbar-link a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -153,12 +179,35 @@
   pointer-events: none;
 }
 
-.navbar .navbar-link a:hover {
+@media (max-width: 767.98px) {
+  .navbar-link a::before {
+    display: none;
+  }
+}
+
+.navbar-link a:hover {
   color: var(--main-color);
   font-weight: 450;
 }
 
-.navbar .navbar-link a:hover::before {
+.navbar-link a:hover::before {
   background: var(--main-color);
 }
-*/
+
+@media (max-width: 767.98px) {
+  .navbar-link a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+  }
+
+  .navbar-link a:hover::after {
+    background-color: var(--main-color);
+  }
+} */

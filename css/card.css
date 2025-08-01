@@ -18,20 +18,13 @@ a {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 
-    figure {
-      margin: 0; /* figure a des marges par défaut, je les supprime */
-      display: flex; /* pour que l'image s'étire sur toute la hauteur de la .card */
-
-      img {
-        object-fit: cover;
-      }
+    img {
+      object-fit: cover;
     }
 
     .card-content {
       .card-title {
         font-size: 16px;
-        line-height: 0.9;
-        /* Pour que le titre ne soit pas trop haut en responsive quand il passe à la ligne*/
       }
 
       .card-subtitle {
@@ -50,14 +43,14 @@ a {
   }
 }
 
-/* CSS classique, pour le validator W3, car il ne comprends pas le nesting */
-
-/* a {
+/* CSS classique, pour le validator W3, car il ne comprends pas le nesting === checked */
+/* 
+a {
   transition: transform 0.2s ease-in-out;
   display: block;
 }
 
-a:hover > .card {
+a:hover .card {
   transform: scale(1.03);
 }
 
@@ -66,7 +59,7 @@ a:hover > .card {
   border-radius: 20px;
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.100);
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -75,23 +68,19 @@ a:hover > .card {
   object-fit: cover;
 }
 
-.card-content .card-title {
+.card .card-content .card-title {
   font-size: 16px;
-  line-height: 0.9;
 }
 
-.card-content .card-subtitle {
+.card .card-content .card-subtitle {
   font-size: 14px;
   font-weight: 400;
 }
 
-.card-content .card-subtitle .euro {
+.card .card-content .card-subtitle .euro {
   font-weight: 700;
 }
 
-.neutral-star {
+.card .neutral-star {
   color: var(--main-bg-color);
 } */
-
-
-

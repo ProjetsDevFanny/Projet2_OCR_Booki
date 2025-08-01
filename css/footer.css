@@ -48,7 +48,7 @@ footer {
   }
 }
 
-/* CSS classique, pour le validator W3, car il ne comprends pas le nesting */
+/* CSS classique, pour le validator W3, car il ne comprends pas le nesting === checked */
 
 /* footer {
   background-color: var(--main-bg-color);
@@ -59,6 +59,19 @@ footer .footer-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  footer .footer-container {
+    gap: 0px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  footer .footer-container {
+    flex-direction: column;
+    gap: 50px;
+  }
 }
 
 footer .footer-container article {
@@ -75,6 +88,12 @@ footer .footer-container article ul {
   flex-direction: column;
   gap: 10px;
   padding-left: 0;
+}
+
+@media (max-width: 1024px) {
+  footer .footer-container article ul {
+    gap: 5px;
+  }
 }
 
 footer .footer-container article ul li {
