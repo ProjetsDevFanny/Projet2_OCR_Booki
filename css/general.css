@@ -1,4 +1,5 @@
-/****** General ***********/
+/***************************** General ******************************/
+
 * {
   font-family: 'Raleway', sans-serif;
   list-style-type: none;
@@ -8,8 +9,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  /*Effet scroll doux*/
+  scroll-behavior: smooth; /*Effet scroll doux*/
 
   body {
     display: flex;
@@ -45,10 +45,8 @@ html {
   --dark-grey: #D9D9D9;
   --white: #FFFFFF;
   --black: #000000;
-}
 
-/* === Taille des polices de caractères === */
-:root {
+  /* === Taille des polices de caractères === */
   --font-size-general: 16px;
   --font-size-title-section: 22px;
 }
@@ -133,7 +131,6 @@ body {
   --font-size-general: 16px;
   --font-size-title-section: 22px;
 }
-
 
 body, button, input {
   font-size: var(--font-size-general);

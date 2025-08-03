@@ -1,3 +1,5 @@
+/***************************** Partie Research et Filters ******************************/
+
 /* === Titre de la section recherche === */
 
 .research-filters-section {
@@ -10,6 +12,10 @@
   h1 {
     padding: 10px 0;
     font-size: var(--font-size-title-section);
+
+    @media (max-width: 767.98px) {
+      padding-top: 20px;
+    }
   }
 
   p {
@@ -83,8 +89,8 @@
       border: 1px solid var(--dark-blue);
     }
 
-    @media (max-width: 767.98px) {
-      span {
+    span {
+      @media (max-width: 767.98px) {
         font-size: 16px;
       }
     }
@@ -120,7 +126,7 @@
   flex-direction: row;
   align-items: center;
   gap: clamp(10px, 2vw, 40px);
-  /* gap entre 10px et 40px et, 2vw = 2% de la largeur de l'écran */
+  /* = gap dynamique: 2vw = 2% de la largeur de l'écran et compris entre 10px et 40px */
   margin-bottom: 30px;
 
   @media (max-width: 1024px) {
@@ -159,7 +165,7 @@
       background-color: var(--white);
       border: 2px solid var(--dark-grey);
       cursor: pointer;
-      transition: all 0.4s ease;
+      transition: background-color 0.4s ease, transform 0.2s ease;
 
       @media (max-width: 1024px) {
         font-size: 14px;
@@ -174,7 +180,7 @@
       }
 
       &:active {
-        transform: scale(0.95);
+        transform: scale(0.8);
       }
 
       i {
@@ -235,6 +241,12 @@
 .research-title h1 {
   padding: 10px 0;
   font-size: var(--font-size-title-section);
+}
+
+@media (max-width: 767.98px) {
+  .research-title h1 {
+    padding-top: 20px;
+  }
 }
 
 .research-title p {
@@ -393,7 +405,7 @@
   background-color: var(--white);
   border: 2px solid var(--dark-grey);
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: background-color 0.4s ease, transform 0.2s ease;
 }
 
 @media (max-width: 1024px) {
@@ -413,7 +425,7 @@
 }
 
 .filter-section .filter-list .filter-button:active {
-  transform: scale(0.95);
+  transform: scale(0.8);
 }
 
 .filter-section .filter-list .filter-button i {
