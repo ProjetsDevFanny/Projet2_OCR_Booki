@@ -1,3 +1,5 @@
+/***************************** Activities ******************************/
+
 .activities {
   margin: 70px 30px;
 
@@ -22,10 +24,10 @@
       display: flex;
 
       .card {
+        /* pour que .card remplisse toute la hauteur disponible dans son parent <a> */
         display: flex;
         height: 100%;
         width: 100%;
-        /* pour que .card remplisse toute la hauteur disponible dans son parent <a> */
         flex-direction: column;
         padding: 0;
 
@@ -46,8 +48,8 @@
         .card-content {
           padding: 15px;
           box-sizing: border-box;
-          flex: 1;
-          /* Permet au contenu de la carte de prendre tout l'espace disponible restant après l'image */
+          /* Centrage du contenu de la légende de la carte */
+          flex: 1; /* Permet au contenu de la légende de la carte de prendre tout l'espace disponible restant après l'image */
           display: flex;
           flex-direction: column;
           justify-content: center;

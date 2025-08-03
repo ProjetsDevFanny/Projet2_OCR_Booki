@@ -147,12 +147,10 @@
         }
 
         img {
-          width: 100%;
-          min-width: 120px;
           /* Largeur uniforme pour toutes les populaires-cards et toutes les tailles d'écran : */
           width: 33%;
-          flex-shrink: 0;
-          /* pour ne pas que la figure rétrécisse en responsive, même si le contenu est plus petit */
+          min-width: 120px;
+          flex-shrink: 0; /* Pour ne pas que la figure rétrécisse en responsive, même si le contenu est plus petit */
           height: 100%;
           /* J'ai mis border-radius à 15px pour que l'image suive mieux les bords (avant 20px) */
           border-top-left-radius: 15px;
@@ -160,23 +158,26 @@
 
           @media (max-width: 1024px) {
             width: 33%;
-            min-width: 100px;
+            min-width: 90px;
           }
         }
 
         .card-content {
-          flex: 1;
-          /* pour occuper tout l'espace restant */
-          padding-left: 10px;
+          padding: 0px 10px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          flex: 1; /* Pour occuper tout l'espace restant */
           box-sizing: border-box;
 
           .card-title {
             margin-top: 10px;
             margin-bottom: 4px;
             line-height: 1.1;
+
+            @media (max-width: 767.98px) {
+              margin: 10px 0px;
+            }
           }
           
           .card-subtitle {
@@ -384,13 +385,13 @@
   @media (max-width: 1024px) {
     .populaires-cards .card img {
       width: 33%;
-      min-width: 100px;
+      min-width: 90px;
     }
   }
   
   .populaires-cards .card-content {
     flex: 1;
-    padding-left: 10px;
+    padding: 0px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -401,6 +402,12 @@
     margin-top: 10px;
     margin-bottom: 4px;
     line-height: 1.1;
+  }
+
+  @media (max-width: 767.98px) {
+    .populaires-cards .card-content .card-title {
+      margin: 10px 0px;
+    }
   }
   
   .populaires-cards .card-content .card-subtitle {
