@@ -1,5 +1,16 @@
 # 📚 Projet Booki - Site de Réservation d'Hébergements
 
+## 🖼️ Captures d'Écran
+
+### Version Desktop
+
+![Version Desktop](images/screenShot/Booki_Desktop_1440px.png)
+
+### Versions Responsive
+
+- [Version Tablette](images/screenShot/Booki_Tablet_1024px.png)
+- [Version Mobile](images/screenShot/Booki_Mobile_375px.png)
+
 ## 🎯 Description du Projet
 
 **Booki** est une page web statique de présentation d'hébergements de vacances, développée dans le cadre de la formation OpenClassrooms. Interface moderne et responsive présentant des hébergements à Marseille et des activités touristiques.
