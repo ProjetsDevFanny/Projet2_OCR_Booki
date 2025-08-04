@@ -13,7 +13,15 @@
 
 ## 🎯 Description du Projet
 
-**Booki** est une page web statique de présentation d'hébergements de vacances, développée dans le cadre de la formation OpenClassrooms. Interface moderne et responsive présentant des hébergements à Marseille et des activités touristiques.
+**Booki** est une page web statique de présentation d'hébergements de vacances, développée dans le cadre de la formation OpenClassrooms. Interface moderne et responsive présentant des hébergements (ici, à Marseille) et des activités touristiques.
+
+### 📧 Contexte du Projet
+
+Vous débutez votre alternance en tant que développeur web au sein de la start-up Booki.
+L'entreprise souhaite développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.
+Vous êtes chargé d'intégrer l'interface du site avec du code HTML et CSS.
+=> Travail en collaboration avec Sarah, la CTO, et Loïc, l'UI designer.
+Sarah vous a envoyé un e-mail pour vous présenter l'avancée du projet.
 
 ## ✨ Fonctionnalités Principales
 
@@ -45,7 +53,7 @@
 ## 🛠️ Technologies Utilisées
 
 - **HTML5** - Structure sémantique
-- **CSS3** - Styles et animations (Variables CSS, Flexbox, Media queries)
+- **CSS3** - Styles et animations (Variables CSS, Flexbox, Media queries, Nesting CSS natif)
 - **Font Awesome** - Icônes vectorielles
 - **Google Fonts** - Police Raleway
 
@@ -121,7 +129,7 @@ Projet2_OCR_Booki/
 - **Attributs ARIA** pour l'accessibilité
 - **CSS modulaire** pour la maintenance
 
-## 📋 Fonctionnalités à Venir
+## 📋 Fonctionnalités pouvant être apportées
 
 - [ ] Système de réservation en ligne
 - [ ] Authentification utilisateur
