@@ -8,8 +8,11 @@
 
 ### Versions Responsive
 
-- [Version Tablette](images/screenShot/Booki_Tablet_1024px.png)
-- [Version Mobile](images/screenShot/Booki_Mobile_375px.png)
+- [Version Tablette](images/screenShot/Booki_Tablet_1024px.png)  
+  <img src="images/screenShot/Booki_Tablet_1024px.png" alt="Aperçu tablette" width="800" />
+
+- [Version Mobile](images/screenShot/Booki_Mobile_375px.png)  
+  <img src="images/screenShot/Booki_Mobile_375px.png" alt="Aperçu mobile" width="400" />
 
 ## 🎯 Description du Projet
 
