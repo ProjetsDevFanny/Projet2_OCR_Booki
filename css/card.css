@@ -2,8 +2,7 @@
 
 a {
   transition: transform 0.2s ease-in-out;
-  display: block;
-  /* pour que l'article à l'intérieur s'étire */
+  display: block; /* pour que l'article à l'intérieur s'étire */
 
   &:has(.card):hover {
     transform: scale(1.03);
