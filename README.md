@@ -1,5 +1,9 @@
 # 📚 Projet Booki - Site de Réservation d'Hébergements
 
+## 🌐 Déploiement
+
+**Site en ligne** : [https://projetsdevfanny.github.io/Projet2_OCR_Booki/](https://projetsdevfanny.github.io/Projet2_OCR_Booki/)
+
 ## 🖼️ Captures d'Écran
 
 ### Version Desktop
