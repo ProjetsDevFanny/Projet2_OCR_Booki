@@ -63,8 +63,8 @@
           /* Occupe tout l'espace disponible */
           min-height: 0;
           /* Permet le rétrécissement en responsive */
-          width: 100%;
-          height: 100%;
+          width: 100%; /* l’image se redimensionne à la largeur de son parent */
+          height: auto; /* garde les proportions */
           border-radius: 15px 15px 0px 0px;
         }
 
