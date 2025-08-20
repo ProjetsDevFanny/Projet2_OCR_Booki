@@ -122,9 +122,9 @@ Projet2_OCR_Booki/
 
 ### Breakpoints
 
+- **Desktop** : 1025px - 1440px
+- **Tablette** : 767.99px - 1024px
 - **Mobile** : 320px - 767.98px
-- **Tablette** : 768px - 1023px
-- **Desktop** : 1024px - 1440px
 
 ### Optimisations
 
